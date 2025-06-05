@@ -45,8 +45,18 @@ export default withZephyr()({
       },
       {
         test: /\.css$/,
-        use: ['postcss-loader'],
-        type: 'css',
+        use: [
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: ['@tailwindcss/postcss', 'autoprefixer'],
+              },
+            },
+          },
+        ],
+        type: 'css/auto',
+        sideEffects: true,
       },
       {
         test: /\.(jsx?|tsx?)$/,

@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+
+.counter-container {
+  @apply p-4 bg-white rounded-lg shadow-md max-w-sm mx-auto;
+}
+
+.counter-title {
+  @apply text-2xl font-bold mb-4 text-center;
+}
+
+.counter-value {
+  @apply text-4xl text-center mb-4;
+}
+
+.counter-buttons {
+  @apply flex justify-center gap-4;
+}
+
+.counter-button-decrease {
+  @apply px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600 transition-colors;
+}
+
+.counter-button-increase {
+  @apply px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition-colors;
+}
